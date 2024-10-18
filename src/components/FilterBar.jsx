@@ -3,27 +3,22 @@ import React from 'react'
 export default function FilterBar({ filter, setFilter }) {
   return (
     <div className="filter-bar">
-      <button 
-        className={filter === 'all' ? 'active' : ''} 
-        onClick={() => setFilter('all')}
-      >
-        All
-      </button>
+      <span>Filter By: </span>
       <button 
         className={filter === 'read' ? 'active' : ''} 
-        onClick={() => setFilter('read')}
+        onClick={() => setFilter(filter === 'read' ? 'all' : 'read')}
       >
         Read
       </button>
       <button 
         className={filter === 'unread' ? 'active' : ''} 
-        onClick={() => setFilter('unread')}
+        onClick={() => setFilter(filter === 'unread' ? 'all' : 'unread')}
       >
         Unread
       </button>
       <button 
         className={filter === 'favorites' ? 'active' : ''} 
-        onClick={() => setFilter('favorites')}
+        onClick={() => setFilter(filter === 'favorites' ? 'all' : 'favorites')}
       >
         Favorites
       </button>

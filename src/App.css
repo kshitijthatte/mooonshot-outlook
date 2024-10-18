@@ -81,7 +81,7 @@ body {
   flex: 1;
 }
 
-.from, .subject, .description, .date {
+.from, .subject, .description {
   margin-bottom: 5px;
 }
 
@@ -92,8 +92,12 @@ body {
 
 .favorite {
   color: #E54065;
-  font-size: 1.2em;
-  margin-left: 10px;
+}
+
+.email-details {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
 }
 
 .email-body {
@@ -143,6 +147,7 @@ body {
 
 .filter-bar {
   display: flex;
+  align-items: center;
   gap: 10px;
   margin-bottom: 20px;
 }
