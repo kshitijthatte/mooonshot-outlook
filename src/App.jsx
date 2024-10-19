@@ -91,6 +91,10 @@ export default function App() {
       const readEmails = updatedEmails.filter(email => email.read).map(email => email.id)
       const favoriteEmails = updatedEmails.filter(email => email.favorite).map(email => email.id)
       persistData(readEmails, favoriteEmails)
+      
+      const updatedSelectedEmail = updatedEmails.find(email => email.id === id);
+      setSelectedEmail(updatedSelectedEmail); 
+
       return updatedEmails
     })
   }
